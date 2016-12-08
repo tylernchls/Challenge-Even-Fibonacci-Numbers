@@ -6,11 +6,20 @@
  * @return {Number} sum
  */
 function _sumFibs( maxFibValue ) {
+
   var sum = 0;
+  var fibNum = [1,2];
 
-  // do your work here
+  for (var i = 1; i < maxFibValue; i++) {
+    var nextFib = fibNum[i] + fibNum[i - 1];
+    fibNum.push(nextFib);
+console.log(fibNum);
 
-  return sum;
+}
+
+
+}
+return sum;
 }
 
 // bonus round
