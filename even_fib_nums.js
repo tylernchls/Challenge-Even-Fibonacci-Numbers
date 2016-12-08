@@ -11,16 +11,20 @@ function _sumFibs( maxFibValue ) {
   var fibNum = [1,2];
 
   for (var i = 1; i < maxFibValue; i++) {
-    var nextFib = fibNum[i] + fibNum[i - 1];
-    fibNum.push(nextFib);
-console.log(fibNum);
-
-}
+      var nextFib = fibNum[i] + fibNum[i - 1];
+      if (nextFib < maxFibValue) {
+        fibNum.push(nextFib)
+      }
+      if(fibNum[i] % 2 ===0){
+        sum += fibNum[i];
+      }
 
 
 }
 return sum;
 }
+
+console.log(_sumFibs(13));
 
 // bonus round
 function _highestFibonacciNumber (maxFibValue){
