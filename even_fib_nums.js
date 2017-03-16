@@ -1,3 +1,4 @@
+
 /**
  * Return the total sum of all even fibonacci numbers up to and including
  * the value given to you at `maxFibValue`
@@ -12,13 +13,12 @@ function _sumFibs( maxFibValue ) {
 
   for (var i = 1; i < maxFibValue; i++) {
       var nextFib = fibNum[i] + fibNum[i - 1];
-      if (nextFib < maxFibValue) {
-        fibNum.push(nextFib)
-      }
-      if(fibNum[i] % 2 ===0){
-        sum += fibNum[i];
-      }
-
+      if (nextFib <= maxFibValue) {
+        fibNum.push(nextFib);
+    }
+    if (fibNum[i] % 2 === 0) {
+      sum += fibNum[i];
+    }
 
 }
 return sum;
